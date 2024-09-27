@@ -1,0 +1,23 @@
+#Creates Window
+poke = tk.Tk()
+poke.geometry('340x440')
+poke.title("Pokedex")
+#poke.configure(bg = '#333333') (Use Later For Dark Mode)
+
+#Creating Widgets
+Login_Label = tk.Label(poke, text="Login") 
+Username_Label = tk.Label(poke, text="Username") 
+Username_Entry = tk.Entry(poke)
+Password_Entry = tk.Entry(poke, show="*") # Show='*' Just Makes text Appear As * So Password Can't Be Seen
+Password_Label = tk.Label(poke, text="Password")
+Login_Button = tk.Button(poke, text="Login")
+
+# Placing Widgets On The Screen
+Login_Label.grid(row=0, column=1, columnspan=2) # Positions Login Text Above The Entry Boxes
+Username_Label.grid(row=1, column=0) # Puts Username On The Next Row
+Username_Entry.grid(row=1, column=1) # Puts Entry Box next To Username Text And Underneath The Login Text
+Password_Label.grid(row=2, column=0) # Puts Username Text On The Next Row 
+Password_Entry.grid(row=2, column=1) # Pus Entry Box Next To Password Text
+Login_Button.grid(row=3, column=1, columnspan=2) # Puts The Login Button In The Middle Underneath The Entry Boxes
+
+poke.mainloop() #runs the poke Window
